@@ -23,3 +23,10 @@ def Experience():
 @app.route("/Education")
 def Education():
     return render_template("Education.html")
+
+@app.route("/Projects")
+def Projects():
+    return render_template("Projects.html")
+
+if __name__ == '__main__':
+	app.run()

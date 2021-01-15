@@ -1,0 +1,15 @@
+{% extends 'Default.html' %}
+
+ {% block content %} 
+ <h2 style="color:White; background:#2F4F4F;">Projects</h2>
+
+<h4>Airport Project - <a href="https://github.com/samturton2/airport_project"><small><i>Github repo</i></small></a></h4>
+<p>This project allowed us to work in an agile environment for a week in groups of 5. The task was to create a database system and functioning front end for an airport. The functionality was that passengers could log in and book flights, and staff could log in and assign aircrafts to flights, assign staff to flights, book tickets for passengers and more. The project was split into sprints, planned using ERD’s and Flow diagrams, and an SQL database was set up on AWS, with the staff and passenger logins encrypted for security. Object Oriented Programming was used to create classes for the functionalities of the front end, using TDD to create the methods. Once finished, flask was used to move the front end from the terminal to a webpage interface.</p>
+
+<h4>Sparta Node App Deployment - <a href="https://github.com/samturton2/Jenkins_DEV_ENV-Sparta_node_app"><small><i>Github Repo</i></small></a> </h4>
+<p>This project was spread out over a few weeks whilst learning virtual environments, CI/CD and AWS. The skeleton of a simple nodejs app with a Mongodb was given, which was fixed of errors on a Virtual Machine, fired up from our local host with vagrant.  Bundler was used with the Gemfile to test for the appropriate modules. A Jenkins Job was set up to detect changes on the GITHUB development branch, run tests on the app and then merge with the main branch if the tests pass. A VPC was set up with a bastion server to enter the DB, in a private and public subnet, as the production environment. Another Jenkins job was set up to deploy the new main branch to the Production environment. The app was able to work with a reverse nginx proxy and could connect to the mongodb to get the /posts page working.</p>
+
+<h4>Sparta Node App IAC - <a href="https://github.com/samturton2/IAC_for_sparta_node_app"><small><i>Github Repo</i></small></a></h4>
+<p>This project focused on coding the Infrastructure of the app, so that the deleted instances could be recreates very easily and scaled up. Ansible allowed us to create playbooks that would provision the app and db environment in yaml files. Packer was used to create an AMI of the provisioned environments with the ansible playbooks. Finally Terraform was used to set up the Cloud Infrastructure, including the NACL’s and security groups. The files were set up in modules and variables to later declare the specifics of the infrastructure. Load balancing and Autoscaling was used to make sure at least 2 instances of the app was running in our VPC at any one time. </p>
+
+ {% endblock %}
